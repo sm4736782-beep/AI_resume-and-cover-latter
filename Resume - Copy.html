@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Resume Creator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-logo">📝 SmartResume</div>
+    <nav class="menu-bar">
+      <button class="tab-switch active" id="resumeTabBtn">Resume Maker</button>
+      <button class="tab-switch" id="coverTabBtn">Cover Letter</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Resume Section -->
+    <section id="resumeSection" class="content-tab active">
+      <h1>Create Resume with AI</h1>
+      <p>Make stunning, job-ready resumes with smart suggestions</p>
+
+      <div class="highlight-box">
+        <h2>🚀 Smart Suggestions</h2>
+        <p>Our AI gives instant feedback to improve your resume quality</p>
+      </div>
+
+      <div class="form-wrapper">
+        <form id="resumeForm">
+          <h3>👤 Personal Info</h3>
+          <input type="text" name="name" placeholder="Full Name*" required />
+          <input type="email" name="email" placeholder="Email Address*" required />
+          <input type="text" name="phone" placeholder="Contact Number" />
+          <input type="text" name="address" placeholder="City / Location" />
+          <input type="date" name="dob" placeholder="Date of Birth" />
+
+          <h3>🎓 Education</h3>
+          <textarea name="education" placeholder="Write your academic history..."></textarea>
+
+          <h3>📜 Certifications</h3>
+          <textarea name="qualification" placeholder="Your degrees, courses, and certificates..."></textarea>
+
+          <h3>🛠️ Key Skills</h3>
+          <textarea name="skills" placeholder="Example: HTML, Python, Communication..."></textarea>
+
+          <h3>🎯 Interests & Hobbies</h3>
+          <textarea name="hobbies" placeholder="Traveling, Writing, Gaming..."></textarea>
+
+          <h3>💼 Summary</h3>
+          <textarea name="summary" placeholder="Describe your professional profile..."></textarea>
+
+          <button type="submit" class="btn-submit" id="generateResume">Generate Resume</button>
+        </form>
+
+        <aside class="preview-panel">
+          <h3>Live Preview</h3>
+          <div id="resumePreview">Your resume preview will appear here...</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Cover Letter Section -->
+    <section id="coverSection" class="content-tab">
+      <h1>Cover Letter Assistant</h1>
+      <p>Generate personalized cover letters for every job</p>
+
+      <div class="form-box">
+        <form id="coverForm">
+          <input name="name" type="text" placeholder="Your Name*" required />
+          <input name="email" type="email" placeholder="Email ID*" required />
+          <input name="company" type="text" placeholder="Company You’re Applying To" />
+          <input name="position" type="text" placeholder="Job Title" />
+          <input name="manager" type="text" placeholder="Hiring Manager’s Name (Optional)" />
+          <textarea name="description" rows="4" placeholder="Paste job description or requirements here..."></textarea>
+          
+          <div class="date-field">
+            <input name="date" type="text" id="coverDate" placeholder="Select Date or Set Today" />
+            <button type="button" onclick="setToday()">Today</button>
+          </div>
+
+          <button type="submit" id="generateCoverLetter">Create Cover Letter</button>
+        </form>
+
+        <div id="coverPreview" class="preview-box"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
